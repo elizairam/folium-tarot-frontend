@@ -1,2 +1,2 @@
-# tarot-readings
-Tarot readings
+# Folium tarot 🍃
+#### Projeto de página para fazer leituras de tarot 
