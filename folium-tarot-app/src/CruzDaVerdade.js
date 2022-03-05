@@ -6,13 +6,13 @@ import "./styles.css";
 
 export default function CruzDaVerdade() {
   const [cartaBase, setCartaBase] = useState([
-    { imgUrl: deckBlue, nome: "", significado: "" },
+    { imgUrl: deckGreen, nome: "", significado: "" },
   ]);
 
   const [cartasLinha, setCartasLinha] = useState([
-    { imgUrl: deckGreen, nome: "", significado: "" },
-    { imgUrl: deckGreen, nome: "", significado: "" },
-    { imgUrl: deckGreen, nome: "", significado: "" },
+    { imgUrl: deckBlue, nome: "", significado: "" },
+    { imgUrl: deckBlue, nome: "", significado: "" },
+    { imgUrl: deckBlue, nome: "", significado: "" },
   ]);
 
   const [cartaFinal, setCartaFinal] = useState([

@@ -34,7 +34,7 @@ export default function Leituras() {
         "Leitura apenas com cartas dos arcanos maiores. Sobre as áreas: base, amor, trabalho, tema central, futuro imediato, desejos e futuro. Recomenda-se como complementar à leitura da vida",
       totalDeCartas: "7 cartas",
       cor: "violet",
-      link: "/cartas",
+      link: "/cartas/jogo/sortear/ancora",
     },
     {
       opção: "Vida",

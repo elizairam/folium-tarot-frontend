@@ -4,34 +4,36 @@ import deckGreen from "./assets/stripy-card-green.png";
 import deckBlue from "./assets/stripy-card-blue.png";
 import "./styles.css";
 
-export default function NoveCartas() {
-  const [cartasPassado, setCartasPassado] = useState([
-    { imgUrl: deckGreen, nome: "", significado: "" },
-    { imgUrl: deckGreen, nome: "", significado: "" },
+export default function Ancora() {
+  const [cartaBase, setCartaBase] = useState([
     { imgUrl: deckGreen, nome: "", significado: "" },
   ]);
 
-  const [cartasPresente, setCartasPresente] = useState([
+  const [cartasLinha, setCartasLinha] = useState([
     { imgUrl: deckBlue, nome: "", significado: "" },
     { imgUrl: deckBlue, nome: "", significado: "" },
     { imgUrl: deckBlue, nome: "", significado: "" },
   ]);
 
-  const [cartasFuturo, setCartasFuturo] = useState([
+  const [cartasTopo, setCartasTopo] = useState([
     { imgUrl: deckRed, nome: "", significado: "" },
     { imgUrl: deckRed, nome: "", significado: "" },
-    { imgUrl: deckRed, nome: "", significado: "" },
+  ]);
+
+  const [cartaFuturo, setCartaFuturo] = useState([
+    { imgUrl: deckGreen, nome: "", significado: "" },
   ]);
 
   const getCartas = async () => {
     try {
       const response = await fetch(
-        "https://tarot-waite-project.herokuapp.com/cartas/jogo/sortear/9/nove-cartas"
+        "https://tarot-waite-project.herokuapp.com/cartas/jogo/sortear/7/ancora"
       );
       const jsonData = await response.json();
-      setCartasPassado(jsonData.slice(0, 3));
-      setCartasPresente(jsonData.slice(3, 6));
-      setCartasFuturo(jsonData.slice(6, 9));
+      setCartaBase(jsonData.slice(0, 1));
+      setCartasLinha(jsonData.slice(1, 4));
+      setCartasTopo(jsonData.slice(4, 6));
+      setCartaFuturo(jsonData.slice(6, 7));
     } catch (err) {
       console.error(err.message);
     }
@@ -41,14 +43,14 @@ export default function NoveCartas() {
     <div class="texto-inicial">
       <header>
         <h1 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          _nove cartas
+          _âncora
         </h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          passado_
+          1.
         </h2>
-        {cartasPassado.map((carta) => (
+        {cartaBase.map((carta) => (
           <>
             <img
               src={carta.imgUrl}
@@ -58,35 +60,67 @@ export default function NoveCartas() {
             />
           </>
         ))}
-        {cartasPassado.map((carta) => (
+        {cartaBase.map((carta) => (
           <>
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
           </>
         ))}
+
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          _presente
+          2. amor / 4. tema central / 3. trabalho
         </h2>
-        {cartasPresente.map((carta) => (
+        {cartasLinha.map((carta) => (
           <>
-            <img src={carta.imgUrl} alt="carta" width={"90px"} />
+            <img
+              src={carta.imgUrl}
+              alt="carta"
+              width={"90px"}
+              title={carta.nome}
+            />
           </>
         ))}
-        {cartasPresente.map((carta) => (
+        {cartasLinha.map((carta) => (
           <>
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
           </>
         ))}
+
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          futuro_
+          5. futuro imediato / 6. desejos
         </h2>
-        {cartasFuturo.map((carta) => (
+        {cartasTopo.map((carta) => (
           <>
-            <img src={carta.imgUrl} alt="carta" width={"90px"} />
+            <img
+              src={carta.imgUrl}
+              alt="carta"
+              width={"90px"}
+              title={carta.nome}
+            />
           </>
         ))}
-        {cartasFuturo.map((carta) => (
+        {cartasTopo.map((carta) => (
+          <>
+            <h2 class="ui blue header">{carta.nome}</h2>
+            <h3 class="ui grey header">{carta.significado}</h3>
+          </>
+        ))}
+
+        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          7. futuro
+        </h2>
+        {cartaFuturo.map((carta) => (
+          <>
+            <img
+              src={carta.imgUrl}
+              alt="carta"
+              width={"90px"}
+              title={carta.nome}
+            />
+          </>
+        ))}
+        {cartaFuturo.map((carta) => (
           <>
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
