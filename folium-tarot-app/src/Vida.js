@@ -90,7 +90,7 @@ export default function Vida() {
   return (
     <div class="texto-inicial">
       <header class="texto-inicial" style={{ "margin-bottom": "15px" }}>
-        <h1 class="ui grey header">_cruz da verdade</h1>
+        <h1 class="ui grey header">_vida</h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
         {/* pessoal */}
