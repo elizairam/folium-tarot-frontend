@@ -6,6 +6,7 @@ import Aleatoria from "./Aleatoria";
 import Menu from "./Menu";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoveCartas from "./NoveCartas";
+import CruzDaVerdade from "./CruzDaVerdade";
 
 export default function App() {
   return (
@@ -27,6 +28,9 @@ export default function App() {
           </Route>
           <Route exact path="/cartas/jogo/sortear/nove-cartas">
             <NoveCartas />
+          </Route>
+          <Route exact path="/cartas/jogo/sortear/cruz-verdade">
+            <CruzDaVerdade />
           </Route>
         </Switch>
       </Router>

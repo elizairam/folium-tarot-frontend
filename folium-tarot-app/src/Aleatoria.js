@@ -24,7 +24,7 @@ export default function Aleatoria() {
         <h1 class="ui grey header">_aleatoria</h1>
       </header>
       <h2 class="ui blue header texto-inicial">
-        <img class="imagem-inicial" src={deck} alt="" width={"90px"} />
+        <img class="imagem-inicial" src={deck} alt="verso da carta" width={"90px"} />
       </h2>
       <h4 class="texto-inicial">
         <button class="ui green button" onClick={() => setCount(count + 1)}>

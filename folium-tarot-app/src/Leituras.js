@@ -23,10 +23,10 @@ export default function Leituras() {
     {
       opção: "Cruz da verdade",
       descrição:
-        "É sorteada um carta cada para cada tema: o presente, as esperanças ou receios, o que está à favor e os desafios",
+        "É sorteada um carta cada para cada tema: base ou o presente, as esperanças ou receios, o que está à favor, os desafios e uma carta final como resultado e conselho",
       totalDeCartas: "5 cartas",
       cor: "blue",
-      link: "/cartas",
+      link: "/cartas/jogo/sortear/cruz-verdade",
     },
     {
       opção: "Âncora",
@@ -42,7 +42,7 @@ export default function Leituras() {
         "Método de leitura sobre as áreas em sequência: pessoal, lar, trabalho, amor e  futuro. São sorteadas 4 cartas para cada tema. No fim também é sorteada uma carta-chave como conselho",
       totalDeCartas: "21 cartas",
       cor: "pink",
-      link: "/cartas",
+      link: "/cartas/jogo/sortear/vida",
     },
     {
       opção: "Nove Cartas",

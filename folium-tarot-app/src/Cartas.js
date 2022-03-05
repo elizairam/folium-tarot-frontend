@@ -125,7 +125,10 @@ export default function Cartas() {
 
   return (
     <div>
-      <h1 class="ui grey header texto-inicial"> _conheça o tarot Rider-Waite Smith</h1>
+      <h1 class="ui grey header texto-inicial">
+        {" "}
+        _conheça o tarot Rider-Waite Smith
+      </h1>
       <p class="texto-inicial">
         <img
           src={deck}
@@ -133,13 +136,18 @@ export default function Cartas() {
           width="200px"
         />
       </p>
-      <p class="texto-inicial">
+      <p class="texto-inicial" style={{ margin: "20px" }}>
         <button class="ui violet button" onClick={getCartasArcanoMaior}>
           Arcano maior
         </button>
         <button class="ui yellow button" onClick={getCartasArcanoMenor}>
           Arcano menor
         </button>
+        <button class="ui grey button" onClick={getCartas}>
+          Todas
+        </button>
+      </p>
+      <p class="texto-inicial" style={{ margin: "20px" }}>
         <button class="ui black button" onClick={getCartasEspadas}>
           ♠ Espadas
         </button>
@@ -153,7 +161,7 @@ export default function Cartas() {
           ♦ Ouros
         </button>
       </p>
-      <div class="ui five stackable cards">
+      <div class="ui five stackable cards" style={{ margin: "10px" }}>
         {cartas.map((carta) => (
           <div class="card">
             <div class="image">
