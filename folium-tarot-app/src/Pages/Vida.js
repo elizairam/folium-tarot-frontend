@@ -95,6 +95,9 @@ export default function Vida() {
       <header class="texto-inicial" style={{ "margin-bottom": "15px" }} onClick={refreshPage}>
         <h1 class="titulo-pagina">_vida</h1>
       </header>
+      <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          pense em uma pergunta ou situação e clique nas cartas_
+        </h2>
       <div class="ui small images" onClick={getCartas}>
         {/* pessoal */}
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
