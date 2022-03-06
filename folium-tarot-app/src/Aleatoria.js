@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import deck from "./assets/stripy-card-green.png";
+import deckGreen from "./assets/stripy-card-green.png";
+import deckRed from "./assets/stripy-card-red.png";
+import deckBlue from "./assets/stripy-card-blue.png";
 import "./styles.css";
 
 export default function Aleatoria() {
@@ -21,16 +23,18 @@ export default function Aleatoria() {
   return (
     <div class="texto-inicial">
       <header class="texto-inicial">
-        <h1 class="ui grey header">_aleatoria</h1>
+        <h1 class="titulo-pagina">_aleatória</h1>
       </header>
-      <h2 class="ui blue header texto-inicial">
-        <img class="imagem-inicial" src={deck} alt="verso da carta" width={"90px"} />
-      </h2>
+      <h1 class="ui blue header texto-inicial">
+        <img class="imagem-inicial" src={deckGreen} alt="verso da carta"/>
+        <img class="imagem-inicial carta-rotacionada" src={deckRed} alt="verso da carta"  />
+        <img class="imagem-inicial carta-horizontal" src={deckBlue} alt="verso da carta" />
+      </h1>
       <h4 class="texto-inicial">
         <button class="ui green button" onClick={() => setCount(count + 1)}>
           + 1 carta
         </button>
-        <button class="ui olive button" onClick={() => setCount(count === 0 ? 0 : count - 1)}>
+        <button class="ui red button" onClick={() => setCount(count === 0 ? 0 : count - 1)}>
           - 1 carta
         </button>
         <div class="ui input focus">
@@ -50,7 +54,7 @@ export default function Aleatoria() {
 
         <h2 class="ui grey header">{count} cartas para a leitura_ </h2>
       </h4>
-      <div class="ui five stackable cards">
+      <div class="ui five stackable cards" style={{ margin: "10px" }}>
         {cartas.map((carta) => (
           <div class="card">
             <div class="image">

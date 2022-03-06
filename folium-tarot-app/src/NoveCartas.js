@@ -40,12 +40,12 @@ export default function NoveCartas() {
   return (
     <div class="texto-inicial">
       <header>
-        <h1 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+        <h1 class="titulo-pagina">
           _nove cartas
         </h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
-        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+        <h2 class="ui grey header" style={{ "margin": "15px" }}>
           passado_
         </h2>
         {cartasPassado.map((carta) => (

@@ -42,7 +42,7 @@ export default function Ancora() {
   return (
     <div class="texto-inicial">
       <header>
-        <h1 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+        <h1 class="titulo-pagina" style={{ "margin-bottom": "15px" }}>
           _âncora
         </h1>
       </header>

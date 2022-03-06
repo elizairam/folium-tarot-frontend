@@ -1,7 +1,3 @@
-body {
-  color: #000;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 .imagem-inicial {
   display: block;
@@ -18,15 +14,26 @@ body {
   padding: 30px;
 }
 
-/* .column {
-  float: left;
-  width: 50%;
-  padding: 10px;
+.titulo-pagina {
+  color: #ffbe40;
+  margin-bottom: 15px; 
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
+.carta-rotacionada {
+  -ms-transform: rotate(45deg); 
+  transform: rotate(45deg);
+}
+.carta-horizontal {
+  -ms-transform: rotate(90deg); 
+  transform: rotate(90deg);
+}
+
+.footer {
+  margin-top: 180px;
+  padding: 45px;
+  background-color: #271f63;
+  color: #fff;
+}
+
+
 

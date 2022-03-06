@@ -36,7 +36,7 @@ export default function CruzDaVerdade() {
   return (
     <div class="texto-inicial">
       <header class="texto-inicial" style={{ "margin-bottom": "15px" }}>
-        <h1 class="ui grey header">_cruz da verdade</h1>
+        <h1 class="titulo-pagina">_cruz da verdade</h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>

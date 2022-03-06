@@ -4,6 +4,7 @@ import "./styles.css";
 
 export default function Cartas() {
   const [cartas, setCartas] = useState([]);
+  const [carregando, setLoading] = useState(true);
 
   const getCartas = async () => {
     try {
@@ -16,6 +17,16 @@ export default function Cartas() {
       console.error(err.message);
     }
   };
+
+  const Loader = () => (
+    <div class="ui active inverted dimmer">
+      <div class="ui medium text loader">Carregando</div>
+    </div>
+  );
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
 
   const getCartasArcanoMaior = async () => {
     try {
@@ -123,7 +134,7 @@ export default function Cartas() {
     return valor;
   }
 
-  return (
+  return carregando === false ? (
     <div>
       <h1 class="ui grey header texto-inicial">
         {" "}
@@ -183,5 +194,7 @@ export default function Cartas() {
         ))}
       </div>
     </div>
+  ) : (
+    <Loader />
   );
 }

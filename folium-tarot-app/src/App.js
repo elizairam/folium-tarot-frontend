@@ -9,6 +9,7 @@ import NoveCartas from "./NoveCartas";
 import CruzDaVerdade from "./CruzDaVerdade";
 import Vida from "./Vida";
 import Ancora from "./Ancora";
+import CruzCelta from "./CruzCelta";
 
 export default function App() {
   return (
@@ -39,6 +40,9 @@ export default function App() {
           </Route>
           <Route exact path="/cartas/jogo/sortear/ancora">
             <Ancora />
+          </Route>
+          <Route exact path="/cartas/jogo/sortear/cruz-celta">
+            <CruzCelta />
           </Route>
         </Switch>
       </Router>

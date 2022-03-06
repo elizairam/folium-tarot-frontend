@@ -8,22 +8,22 @@ export default function Leituras() {
     {
       opção: "Aleatória",
       descrição:
-        "Essa leitura é a mais ampla e livre. É possível escolher quantas cartas são sorteadas e não existem áreas pré-definidas",
-      totalDeCartas: "Quantidade variada de cartas",
+        "Essa leitura é a mais generalista e livre. É possível escolher quantas cartas são sorteadas e não existem áreas pré-definidas. Dependendo dos significados das cartas uma área pode parecer mais relevante",
+      totalDeCartas: "variáveis",
       cor: "green",
       link: "/cartas/jogo/sortear/aleatoria",
     },
     {
       opção: "Cruz Celta",
-      descrição: "hdujajaghdghs",
-      totalDeCartas: "5",
+      descrição: "Leitura sobre dez áreas, cada uma com uma carta. Os temas em sequência são: presente, influência, perguntas passadas, passado imediato, pensamentos que prevalecem, futuro imediato, temores, fatores ambientais, esperanças e resultado final",
+      totalDeCartas: "10 cartas",
       cor: "teal",
-      link: "/cartas",
+      link: "/cartas/jogo/sortear/cruz-celta",
     },
     {
       opção: "Cruz da verdade",
       descrição:
-        "É sorteada um carta cada para cada tema: base ou o presente, as esperanças ou receios, o que está à favor, os desafios e uma carta final como resultado e conselho",
+        "É sorteada um carta cada para cada tema: base ou o presente, as esperanças ou receios, o que está a favor, os desafios e uma carta final como resultado e conselho",
       totalDeCartas: "5 cartas",
       cor: "blue",
       link: "/cartas/jogo/sortear/cruz-verdade",
