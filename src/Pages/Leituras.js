@@ -47,7 +47,7 @@ export default function Leituras() {
     {
       opção: "Nove Cartas",
       descrição:
-        "São mostrados os aspectos do passado, presente e futuro em blocos separados. Há três cartas para cada um dos temas. As cartas são lidas numa sequência bem linear",
+        "São mostrados os aspectos do passado, presente e futuro em blocos separados. Há três cartas para cada um dos temas. As cartas são lidas de forma linear",
       totalDeCartas: "9 cartas",
       cor: "red",
       link: "/cartas/jogo/sortear/nove-cartas",
@@ -86,7 +86,7 @@ export default function Leituras() {
         class="imagem-inicial"
         src={leituraDasCartas}
         alt="ilustração de uma pessoa lendo cartas de tarot"
-        width="400px"
+        width={'95%'}
       />
     </div>
   );

@@ -9,7 +9,7 @@ export default function Inicial() {
         <h1 class="titulo-pagina">folium_</h1>
       </header>
       <h1>
-        <img class="imagem-inicial" src={bolaCristal} alt="bola de cristal" />
+        <img class="imagem-inicial" src={bolaCristal} alt="bola de cristal" width={'95%'}/>
       </h1>
       <h2 class="ui grey header texto-inicial">_mini manual de tarot✨</h2>
     </div>

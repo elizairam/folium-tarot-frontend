@@ -147,29 +147,33 @@ export default function Cartas() {
           width="200px"
         />
       </p>
-      <p class="texto-inicial" style={{ margin: "20px" }}>
+      <p class="texto-inicial" style={{ margin: "10px" }}>
         <button class="ui violet button" onClick={getCartasArcanoMaior}>
           Arcano maior
         </button>
         <button class="ui yellow button" onClick={getCartasArcanoMenor}>
           Arcano menor
         </button>
-        <button class="ui grey button" onClick={getCartas}>
-          Todas
+      </p>
+      <p class="texto-inicial" style={{ margin: "10px", padding: "5px" }}>
+        <button class="ui red button" onClick={getCartasCopas}>
+          ♥ Copas
+        </button>
+        <button class="ui red button" onClick={getCartasOuros}>
+          ♦ Ouros
         </button>
       </p>
-      <p class="texto-inicial" style={{ margin: "20px" }}>
+      <p class="texto-inicial" style={{ margin: "10px", padding: "5px" }}>
         <button class="ui black button" onClick={getCartasEspadas}>
           ♠ Espadas
         </button>
         <button class="ui black button" onClick={getCartasPaus}>
           ♣ Paus
         </button>
-        <button class="ui red button" onClick={getCartasCopas}>
-          ♥ Copas
-        </button>
-        <button class="ui red button" onClick={getCartasOuros}>
-          ♦ Ouros
+      </p>
+      <p class="texto-inicial" style={{ margin: "10px", padding: "5px" }}>
+        <button class="ui grey button" onClick={getCartas}>
+          Todas
         </button>
       </p>
       <div class="ui five stackable cards" style={{ margin: "10px" }}>
