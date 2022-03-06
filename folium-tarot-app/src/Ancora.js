@@ -48,7 +48,7 @@ export default function Ancora() {
       </header>
       <div class="ui small images" onClick={getCartas}>
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          1.
+          1.base
         </h2>
         {cartaBase.map((carta) => (
           <>
