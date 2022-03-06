@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import deckGreen from "./assets/stripy-card-green.png";
-import deckBlue from "./assets/stripy-card-blue.png";
-import deckRed from "./assets/stripy-card-red.png";
-import "./styles.css";
+import deckGreen from "../assets/stripy-card-green.png";
+import deckBlue from "../assets/stripy-card-blue.png";
+import deckRed from "../assets/stripy-card-red.png";
+import "../styles.css";
 
 export default function CruzCelta() {
   const [cartaBase, setCartaBase] = useState([
@@ -58,14 +58,25 @@ export default function CruzCelta() {
     }
   };
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div class="texto-inicial">
-      <header class="texto-inicial" style={{ "margin-bottom": "15px" }}>
+      <header
+        class="texto-inicial"
+        style={{ "margin-bottom": "15px" }}
+        onClick={refreshPage}
+      >
         <h1 class="titulo-pagina">_cruz celta</h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          5. pensamentos que prevalecem
+          pense em uma pergunta ou situação e clique nas cartas_
+        </h2>
+        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          pensamentos que prevalecem
         </h2>
         {cartaBase.map((carta) => (
           <>
@@ -78,14 +89,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaBase.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          4. passado imediato / 1. presente / 6. futuro imediato
+          passado imediato / presente / futuro imediato
         </h2>
         {cartasLinha.map((carta) => (
           <>
@@ -98,14 +109,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartasLinha.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          2. influências
+          influências
         </h2>
         {cartaInfluencia.map((carta) => (
           <>
@@ -119,14 +130,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaInfluencia.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          3. perguntas passadas
+          perguntas passadas
         </h2>
         {cartaPassado.map((carta) => (
           <>
@@ -139,14 +150,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaPassado.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          7. temores
+          temores
         </h2>
         {cartaTemores.map((carta) => (
           <>
@@ -159,14 +170,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaTemores.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          8. fatores ambientais
+          fatores ambientais
         </h2>
         {cartaFatores.map((carta) => (
           <>
@@ -179,14 +190,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaFatores.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          9. esperanças
+          esperanças
         </h2>
         {cartaEsperancas.map((carta) => (
           <>
@@ -199,14 +210,14 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaEsperancas.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          10. resultado final
+          resultado final
         </h2>
         {cartaResultado.map((carta) => (
           <>
@@ -219,10 +230,10 @@ export default function CruzCelta() {
           </>
         ))}
         {cartaResultado.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
       </div>
     </div>

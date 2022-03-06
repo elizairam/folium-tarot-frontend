@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import deckGreen from "./assets/stripy-card-green.png";
-import deckBlue from "./assets/stripy-card-blue.png";
-import deckRed from "./assets/stripy-card-red.png";
-import "./styles.css";
+import deckGreen from "../assets/stripy-card-green.png";
+import deckBlue from "../assets/stripy-card-blue.png";
+import deckRed from "../assets/stripy-card-red.png";
+import "../styles.css";
 
 export default function Vida() {
   // pessoal
@@ -86,10 +86,13 @@ export default function Vida() {
       console.error(err.message);
     }
   };
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <div class="texto-inicial">
-      <header class="texto-inicial" style={{ "margin-bottom": "15px" }}>
+      <header class="texto-inicial" style={{ "margin-bottom": "15px" }} onClick={refreshPage}>
         <h1 class="titulo-pagina">_vida</h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
@@ -111,30 +114,30 @@ export default function Vida() {
           </>
         ))}
         {cartaBasePessoal.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
           2. / 3. / 4.
         </h2>
         {cartasPessoal.map((carta) => (
-          <>
+          <div class="significado">
             <img
               src={carta.imgUrl}
               alt="carta"
               width={"90px"}
               title={carta.nome}
             />
-          </>
+          </div>
         ))}
         {cartasPessoal.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         {/* lar */}
@@ -155,30 +158,30 @@ export default function Vida() {
           </>
         ))}
         {cartaBaseLar.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
           6. / 7. / 8.
         </h2>
         {cartasLar.map((carta) => (
-          <>
+          <div class="significado">
             <img
               src={carta.imgUrl}
               alt="carta"
               width={"90px"}
               title={carta.nome}
             />
-          </>
+          </div>
         ))}
         {cartasLar.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         {/* trabalho */}
@@ -199,10 +202,10 @@ export default function Vida() {
           </>
         ))}
         {cartaBaseTrabalho.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
@@ -219,10 +222,10 @@ export default function Vida() {
           </>
         ))}
         {cartasTrabalho.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         {/* amor */}
@@ -243,30 +246,30 @@ export default function Vida() {
           </>
         ))}
         {cartaBaseAmor.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
           14. / 15. / 16.
         </h2>
         {cartasAmor.map((carta) => (
-          <>
+          <div class="significado">
             <img
               src={carta.imgUrl}
               alt="carta"
               width={"90px"}
               title={carta.nome}
             />
-          </>
+          </div>
         ))}
         {cartasAmor.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         {/* futuro */}
@@ -287,10 +290,10 @@ export default function Vida() {
           </>
         ))}
         {cartaBaseFuturo.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
@@ -307,10 +310,10 @@ export default function Vida() {
           </>
         ))}
         {cartasFuturo.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         {/* final */}
@@ -331,10 +334,10 @@ export default function Vida() {
           </>
         ))}
         {cartaFinal.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
       </div>
     </div>

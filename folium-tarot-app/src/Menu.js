@@ -1,10 +1,9 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
 export default function Menu() {
   return (
     <>
-      <div class="ui secondary pointing menu ">
+      <div class="ui tabular menu ">
         <a class="item active" href="/">
           Início
         </a>

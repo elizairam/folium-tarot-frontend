@@ -1,15 +1,15 @@
 import React from "react";
-import Cartas from "./Cartas";
-import Inicial from "./Inicial";
-import Leituras from "./Leituras";
-import Aleatoria from "./Aleatoria";
+import Cartas from "./Pages/Cartas";
+import Inicial from "./Pages/Inicial";
+import Leituras from "./Pages/Leituras";
+import Aleatoria from "./Pages/Aleatoria";
 import Menu from "./Menu";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NoveCartas from "./NoveCartas";
-import CruzDaVerdade from "./CruzDaVerdade";
-import Vida from "./Vida";
-import Ancora from "./Ancora";
-import CruzCelta from "./CruzCelta";
+import NoveCartas from "./Pages/NoveCartas";
+import CruzDaVerdade from "./Pages/CruzDaVerdade";
+import Vida from "./Pages/Vida";
+import Ancora from "./Pages/Ancora";
+import CruzCelta from "./Pages/CruzCelta";
 
 export default function App() {
   return (

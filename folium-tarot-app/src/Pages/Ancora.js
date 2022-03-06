@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import deckGreen from "./assets/stripy-card-green.png";
-import deckBlue from "./assets/stripy-card-blue.png";
-import deckRed from "./assets/stripy-card-red.png";
-import "./styles.css";
+import deckRed from "../assets/stripy-card-red.png";
+import deckGreen from "../assets/stripy-card-green.png";
+import deckBlue from "../assets/stripy-card-blue.png";
+import "../styles.css";
 
-export default function CruzDaVerdade() {
+export default function Ancora() {
   const [cartaBase, setCartaBase] = useState([
     { imgUrl: deckGreen, nome: "", significado: "" },
   ]);
@@ -15,32 +15,51 @@ export default function CruzDaVerdade() {
     { imgUrl: deckBlue, nome: "", significado: "" },
   ]);
 
-  const [cartaFinal, setCartaFinal] = useState([
+  const [cartasTopo, setCartasTopo] = useState([
     { imgUrl: deckRed, nome: "", significado: "" },
+    { imgUrl: deckRed, nome: "", significado: "" },
+  ]);
+
+  const [cartaFuturo, setCartaFuturo] = useState([
+    { imgUrl: deckGreen, nome: "", significado: "" },
   ]);
 
   const getCartas = async () => {
     try {
       const response = await fetch(
-        "https://tarot-waite-project.herokuapp.com/cartas/jogo/sortear/5/cruz-verdade"
+        "https://tarot-waite-project.herokuapp.com/cartas/jogo/sortear/7/ancora"
       );
       const jsonData = await response.json();
       setCartaBase(jsonData.slice(0, 1));
       setCartasLinha(jsonData.slice(1, 4));
-      setCartaFinal(jsonData.slice(4, 5));
+      setCartasTopo(jsonData.slice(4, 6));
+      setCartaFuturo(jsonData.slice(6, 7));
     } catch (err) {
       console.error(err.message);
     }
   };
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div class="texto-inicial">
-      <header class="texto-inicial" style={{ "margin-bottom": "15px" }}>
-        <h1 class="titulo-pagina">_cruz da verdade</h1>
+      <header>
+        <h1
+          class="titulo-pagina"
+          style={{ "margin-bottom": "15px" }}
+          onClick={refreshPage}
+        >
+          _âncora
+        </h1>
       </header>
       <div class="ui small images" onClick={getCartas}>
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          1.base ou presente
+          pense em uma pergunta ou situação e clique nas cartas_
+        </h2>
+        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          base ou presente
         </h2>
         {cartaBase.map((carta) => (
           <>
@@ -53,14 +72,14 @@ export default function CruzDaVerdade() {
           </>
         ))}
         {cartaBase.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          3. favorável / 2. esperanças / 4. desafios
+          amor / tema central / trabalho
         </h2>
         {cartasLinha.map((carta) => (
           <>
@@ -73,16 +92,16 @@ export default function CruzDaVerdade() {
           </>
         ))}
         {cartasLinha.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
 
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          5. resultado ou conselho final
+          futuro imediato / desejos
         </h2>
-        {cartaFinal.map((carta) => (
+        {cartasTopo.map((carta) => (
           <>
             <img
               src={carta.imgUrl}
@@ -92,11 +111,31 @@ export default function CruzDaVerdade() {
             />
           </>
         ))}
-        {cartaFinal.map((carta) => (
-          <>
+        {cartasTopo.map((carta) => (
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
+          </div>
+        ))}
+
+        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          futuro
+        </h2>
+        {cartaFuturo.map((carta) => (
+          <>
+            <img
+              src={carta.imgUrl}
+              alt="carta"
+              width={"90px"}
+              title={carta.nome}
+            />
           </>
+        ))}
+        {cartaFuturo.map((carta) => (
+          <div class="significado">
+            <h2 class="ui blue header">{carta.nome}</h2>
+            <h3 class="ui grey header">{carta.significado}</h3>
+          </div>
         ))}
       </div>
     </div>

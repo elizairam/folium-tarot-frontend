@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import deckGreen from "./assets/stripy-card-green.png";
-import deckRed from "./assets/stripy-card-red.png";
-import deckBlue from "./assets/stripy-card-blue.png";
-import "./styles.css";
+import deckGreen from "../assets/stripy-card-green.png";
+import deckRed from "../assets/stripy-card-red.png";
+import deckBlue from "../assets/stripy-card-blue.png";
+import "../styles.css";
 
 export default function Aleatoria() {
   const [cartas, setCartas] = useState([]);
@@ -25,6 +25,9 @@ export default function Aleatoria() {
       <header class="texto-inicial">
         <h1 class="titulo-pagina">_aleatória</h1>
       </header>
+      <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          pense em uma pergunta ou situação_
+        </h2>
       <h1 class="ui blue header texto-inicial">
         <img class="imagem-inicial" src={deckGreen} alt="verso da carta"/>
         <img class="imagem-inicial carta-rotacionada" src={deckRed} alt="verso da carta"  />

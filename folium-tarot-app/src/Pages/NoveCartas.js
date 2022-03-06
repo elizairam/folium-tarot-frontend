@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import deckRed from "./assets/stripy-card-red.png";
-import deckGreen from "./assets/stripy-card-green.png";
-import deckBlue from "./assets/stripy-card-blue.png";
-import "./styles.css";
+import deckRed from "../assets/stripy-card-red.png";
+import deckGreen from "../assets/stripy-card-green.png";
+import deckBlue from "../assets/stripy-card-blue.png";
+import "../styles.css";
 
 export default function NoveCartas() {
   const [cartasPassado, setCartasPassado] = useState([
@@ -37,15 +37,22 @@ export default function NoveCartas() {
     }
   };
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div class="texto-inicial">
       <header>
-        <h1 class="titulo-pagina">
+        <h1 class="titulo-pagina" onClick={refreshPage}>
           _nove cartas
         </h1>
+        <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
+          pense em uma pergunta ou situação e clique nas cartas_
+        </h2>
       </header>
       <div class="ui small images" onClick={getCartas}>
-        <h2 class="ui grey header" style={{ "margin": "15px" }}>
+        <h2 class="ui grey header" style={{ margin: "15px" }}>
           passado_
         </h2>
         {cartasPassado.map((carta) => (
@@ -59,10 +66,10 @@ export default function NoveCartas() {
           </>
         ))}
         {cartasPassado.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
           _presente
@@ -73,10 +80,10 @@ export default function NoveCartas() {
           </>
         ))}
         {cartasPresente.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
         <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
           futuro_
@@ -87,10 +94,10 @@ export default function NoveCartas() {
           </>
         ))}
         {cartasFuturo.map((carta) => (
-          <>
+          <div class="significado">
             <h2 class="ui blue header">{carta.nome}</h2>
             <h3 class="ui grey header">{carta.significado}</h3>
-          </>
+          </div>
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import bolaCristal from "./assets/stripy-magic-ball.png";
-import "./styles.css";
+import bolaCristal from "../assets/stripy-magic-ball.png";
+import "../styles.css";
 
 export default function Inicial() {
   return (

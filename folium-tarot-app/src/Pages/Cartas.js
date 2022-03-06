@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import deck from "./assets/stripy-card-6.png";
-import "./styles.css";
+import deck from "../assets/stripy-card-6.png";
+import "../styles.css";
 
 export default function Cartas() {
   const [cartas, setCartas] = useState([]);
