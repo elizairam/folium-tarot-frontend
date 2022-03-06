@@ -1,2 +1,2 @@
-# Folium tarot 🍃
-#### Projeto de página para fazer leituras de tarot 
+# _folium tarot 📖🔮
+#### página com mini manual de tarot e leituras online
