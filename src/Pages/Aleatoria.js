@@ -26,30 +26,32 @@ export default function Aleatoria() {
         <h1 class="titulo-pagina">_aleatória</h1>
       </header>
       <h2 class="ui grey header" style={{ "margin-bottom": "15px" }}>
-          pense em uma pergunta ou situação_
-        </h2>
+        pense em uma pergunta ou situação_
+      </h2>
       <h1 class="ui blue header texto-inicial">
-        <img class="imagem-inicial" src={deckGreen} alt="verso da carta"/>
-        <img class="imagem-inicial carta-rotacionada" src={deckRed} alt="verso da carta"  />
-        <img class="imagem-inicial carta-horizontal" src={deckBlue} alt="verso da carta" />
+        <img class="imagem-inicial" src={deckGreen} alt="verso da carta" />
+        <img
+          class="imagem-inicial carta-rotacionada"
+          src={deckRed}
+          alt="verso da carta"
+        />
+        <img
+          class="imagem-inicial carta-horizontal"
+          src={deckBlue}
+          alt="verso da carta"
+        />
       </h1>
       <h4 class="texto-inicial">
         <button class="ui green button" onClick={() => setCount(count + 1)}>
           + 1 carta
         </button>
-        <button class="ui red button" onClick={() => setCount(count === 0 ? 0 : count - 1)}>
+        <button
+          class="ui red button"
+          onClick={() => setCount(count === 0 ? 0 : count - 1)}
+        >
           - 1 carta
         </button>
-        <div class="ui input focus">
-          <input
-            defaultValue={0}
-            value={count}
-            onChange={(e) => setCount(e.target.value)}
-            name={count}
-            type="number"
-            style={{'margin-right': '4px', 'width': '90px'}}
-          />
-        </div>
+        <div class="ui input focus"></div>
         <button class="ui violet button" onClick={getCartasAleatorias}>
           Sortear
         </button>
